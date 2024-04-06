@@ -12,19 +12,19 @@ export class MoviesService {
 
     constructor(private http: HttpClient) {}
 
-    getPosts() {
+    getMovies() {
         return this.http.get<Movie[]>(`${this.apiURL}movies`);
     }
 
-    getPost(id: number) {
+    getMovie(id: number) {
         return this.http.get<Movie>(`${this.apiURL}movies/${id}`);
     }
 
-    newPost(data: Movie) {
+    newMovie(data: Movie) {
         return this.http.post<Movie>(`${this.apiURL}movies`, data);
     }
 
-    updatePost(id: number, data: Partial<Movie>) {
+    updateMovie(id: number, data: Partial<Movie>) {
         return this.http.patch<Movie>(`${this.apiURL}movies/${id}`, data);
     }
 }

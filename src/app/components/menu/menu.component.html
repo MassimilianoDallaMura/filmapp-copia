@@ -24,7 +24,7 @@
             >Home</a
           >
         </li>
-        <li class="nav-item">
+        <li *ngIf="!user" class="nav-item">
           <a
             class="nav-link fs-3"
             aria-current="page"
@@ -33,7 +33,7 @@
             >Accedi</a
           >
         </li>
-        <li class="nav-item">
+        <li *ngIf="!user" class="nav-item">
             <a
               class="nav-link fs-3"
               aria-current="page"
@@ -42,7 +42,7 @@
               >Registrati</a
             >
           </li>
-        <li class="nav-item">
+        <li *ngIf="user" class="nav-item">
           <a
             class="nav-link fs-3"
             aria-current="page"
@@ -51,7 +51,7 @@
             >Film</a
           >
         </li>
-        <li class="nav-item">
+        <li *ngIf="user" class="nav-item">
           <a
             class="nav-link fs-3"
             aria-current="page"
@@ -60,7 +60,7 @@
             >Utenti</a
           >
         </li>
-        <li class="nav-item dropdown">
+        <li *ngIf="user" class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggl fs-3"
             aria-current="page"
@@ -73,7 +73,7 @@
             Profilo
           </a>
           <ul class="dropdown-menu">
-            <li>
+            <li *ngIf="user">
               <a
                 class="dropdown-item fs-3"
                 aria-current="page"
@@ -82,7 +82,7 @@
                 >Dettagli</a
               >
             </li>
-            <li>
+            <li *ngIf="user">
               <a
                 class="dropdown-item fs-3"
                 aria-current="page"
@@ -95,15 +95,12 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <h4 *ngIf="user" class="float-end me-3">
+       Buon film
+    </h4>
+    <button type="button" class="btn btn-danger float-end" *ngIf="user" (click)="logout()">
+        Logout
+    </button>
     </div>
   </div>
 </nav>

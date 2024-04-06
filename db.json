@@ -29,6 +29,18 @@
       "password": "$2a$10$Ob6GX8hBKvGMY7dnDKkxqOLggRExmNOXrO5we3Ie4mY.wcWgMeZIa",
       "name": "Cesare Augusto",
       "id": 5
+    },
+    {
+      "email": "marco@bianchi.it",
+      "password": "$2a$10$QzAuuHXTaZKWL74wes4YbuvWkGECmqYROlmxPmKWcN.zLIsojeY8G",
+      "name": "Marco Bianchi",
+      "id": 6
+    },
+    {
+      "email": "giulia@verdi.it",
+      "password": "$2a$10$z0Hx9k0RJ6SbSnLKnyJelOAsh7w6aqg91nnoaE1zz9pUJ7cCjQyU.",
+      "name": "Giulia Verdi",
+      "id": 7
     }
   ],
   "favorites": [

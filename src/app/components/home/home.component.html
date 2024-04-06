@@ -2,17 +2,22 @@
     <div>
       <h1 class="text-center text-white">BENVENUTO</h1>
       <!-- Utilizziamo *ngIf per controllare la visibilità del secondo div container -->
-      <div *ngIf="!isUserLoggedIn" class="container mt-5 text-center border border-2 border-dark d-flex justify-content-center align-items-center" style="height: 200px; background-color: rgba(240, 255, 255, 0.4)">
+      <div  *ngIf="!user" class="container mt-5 text-center border border-2 border-dark d-flex justify-content-center align-items-center" style="height: 200px; background-color: rgba(240, 255, 255, 0.4)">
         <div class="">
           <a class="btn btn-primary mx-auto" style="width: 300px" [routerLink]="['/accedi']">Login</a>
           <a class="btn btn-primary mx-auto ms-3" style="width: 300px" [routerLink]="['/registrati']">Signup</a>
         </div>
       </div>
       
-      <div *ngIf="isUserLoggedIn" class="container mt-5 text-center border border-2 border-dark d-flex justify-content-center align-items-center" style="height: 200px; background-color: rgba(240, 255, 255, 0.4)">
-        <h1>Ciao, benvenuto!</h1>
+      <div  *ngIf="user" class="r" style="" ngClass="text-center">
+        <h1>Ciao, benvenuto</h1>
+        <p class="fs-4">{{ user.user.name }}</p>
       </div>
       
     </div>
+
+    
   </div>
-  
+  <app-movie class="text-center"></app-movie>
+
+  <router-outlet></router-outlet>

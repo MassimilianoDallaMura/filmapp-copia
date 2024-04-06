@@ -11,5 +11,8 @@ export interface Movie {
     releaseDate: Date;
     country: string;
     language: string;
-    awards: string[];
+    video: boolean;
+    overview: string;
+    poster_path: string;
+    popularity: number;
 }

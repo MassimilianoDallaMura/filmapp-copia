@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthData } from 'src/app/interface/auth-data.interface';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  isUserLoggedIn: boolean = false;
+  user!: AuthData | null;
 
-  constructor(private router: Router) {}
+  constructor(private authSrv: AuthService) {}
 
- 
+  ngOnInit(): void {
+      this.authSrv.user$.subscribe((user) => {       // riceve lo user
+          this.user = user;  //sa se c'è l'utente
+      });
+  }
     
   
 
