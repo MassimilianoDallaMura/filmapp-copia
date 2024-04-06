@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active fs-3"
+            aria-current="page"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fs-3"
+            aria-current="page"
+            [routerLink]="['/accedi']"
+            routerLinkActive="active"
+            >Accedi</a
+          >
+        </li>
+        <li class="nav-item">
+            <a
+              class="nav-link fs-3"
+              aria-current="page"
+              [routerLink]="['/registrati']"
+              routerLinkActive="active"
+              >Registrati</a
+            >
+          </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fs-3"
+            aria-current="page"
+            [routerLink]="['/film']"
+            routerLinkActive="active"
+            >Film</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fs-3"
+            aria-current="page"
+            [routerLink]="['/utenti']"
+            routerLinkActive="active"
+            >Utenti</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggl fs-3"
+            aria-current="page"
+            [routerLink]="['/profilo']"
+            routerLinkActive="active"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Profilo
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item fs-3"
+                aria-current="page"
+                [routerLink]="['/profilo/dettagli']"
+                routerLinkActive="active"
+                >Dettagli</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item fs-3"
+                aria-current="page"
+                [routerLink]="['/profilo/preferiti']"
+                routerLinkActive="active"
+                >Preferiti</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
