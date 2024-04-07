@@ -41,6 +41,12 @@
       "password": "$2a$10$z0Hx9k0RJ6SbSnLKnyJelOAsh7w6aqg91nnoaE1zz9pUJ7cCjQyU.",
       "name": "Giulia Verdi",
       "id": 7
+    },
+    {
+      "email": "mas@si.it",
+      "password": "$2a$10$Uwup91h6Q0d.RU84BcXenO8Ut3GxtR3mdug.tylAn/GpFtjZ663yy",
+      "name": "massimiliano",
+      "id": 8
     }
   ],
   "favorites": [
